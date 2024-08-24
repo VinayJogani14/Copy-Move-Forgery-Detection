@@ -1,0 +1,28 @@
+{
+  "name": "fake-image-detection",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server/app.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "prettier": "prettier --write .",
+    "heroku-postbuild": "cd server && npm install && cd .. && cd client && npm install && npm run build",
+    "start": "node server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shahparth36/fake-image-detection.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shahparth36/fake-image-detection/issues"
+  },
+  "homepage": "https://github.com/shahparth36/fake-image-detection#readme",
+  "dependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
